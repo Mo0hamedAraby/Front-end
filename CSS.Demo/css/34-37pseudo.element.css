@@ -1,0 +1,304 @@
+/*  #34 -Start- pseudo Classes 
+    State Of pseudo
+    -Hover : When The Cursor Come In This Link Its change To Red 
+    -Checked : When Checked This Point Label Display Is None  
+    -Visited : When Visit the Link The Color Its Change To blue
+    -Empty : When Give It border { 2px Solid Red } Its Make All Empty 
+     In Wedsite Red
+    -Focus : Its To chenge Label Color Or Any value When I Click To This Lable
+    */
+h1 {
+  background-color: black;
+  color: white;
+  font-size: large;
+  margin: 10px 0;
+}
+.cla-one {
+  background-color: red;
+  color: white;
+}
+.cla-two {
+  background-color: #eee;
+  width: 100px;
+  height: 100px;
+}
+.cla {
+  background-color: #eee;
+  width: 100px;
+  height: 100px;
+}
+.link-4:hover {
+  color: red;
+  border: 2px dotted;
+}
+.ch:checked {
+  display: none;
+}
+
+.link-1 {
+  color: green;
+  text-decoration: none;
+}
+.link-1:visited {
+  color: blue;
+}
+.in:focus {
+  border: 2px solid black;
+}
+/*   #34 -End- pseudo Classes  */
+/*  #35 -Start- pseudo Element _ First Letter,First Line,
+    Selector */
+.ele-one span {
+  background-color: red;
+  color: white;
+  font-size: xx-large;
+  padding: 3px;
+}
+.ele-two::first-letter {
+  background-color: red;
+  color: white;
+  font-size: xx-large;
+  padding: 3px;
+}
+.ele-three::first-line {
+  color: green;
+}
+.ele-four::selection {
+  background-color: black;
+  color: yellow;
+} /*When Select This Paragraph Its Take This Selection*/
+/*  #35 -End- pseudo Element _ First Letter,First Line,
+Selector */
+/*  #36 -Start- pseudo Element _ Before,After,Content */
+.parent {
+  overflow: hidden;
+  clear: both;
+}
+.one {
+  position: relative;
+  background-color: #eee;
+  padding: 10px;
+  width: 600px;
+  float: left;
+  margin-bottom: 20px;
+}
+/* I Change It Class Three To Make Before And After */
+.three {
+  position: relative;
+  background-color: #eee;
+  padding: 10px;
+  width: 600px;
+  float: left;
+  margin-bottom: 20px;
+}
+.user {
+  background-color: #eee;
+  width: 50px;
+  margin-right: 20px;
+  padding: 10px;
+  height: 55.5px;
+  float: left;
+  font-size: 50px;
+  text-align: center;
+}
+/* her Its Make With Span */
+.one .pipeline {
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background-color: #90e790;
+  top: 0;
+  right: -30px;
+}
+/*  #36 -Start- pseudo Element _ Before,After,Content
+Don't Forget Content:""; In Before And After */
+/* I Make It To Make All Similar */
+.one::before {
+  content: "";
+  border-color: transparent green transparent transparent;
+  border-width: 10px;
+  border-style: solid;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  left: -20px;
+}
+.three::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background-color: #90e790;
+  top: 0;
+  right: -30px;
+}
+.three::before {
+  content: "";
+  border-color: transparent green transparent transparent;
+  border-width: 10px;
+  border-style: solid;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  left: -20px;
+}
+/* I Make It To Make All Similar */
+.one::before {
+  content: "";
+  border-color: transparent green transparent transparent;
+  border-width: 10px;
+  border-style: solid;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  left: -20px;
+}
+/*  #36 -End- pseudo Element _ Before,After,Content */
+/* #37 - Start - Pseudo Element _ Conent And Trainings */
+.content-1 {
+  position: relative;
+  overflow: hidden;
+  clear: both;
+  counter-increment: members-counter;
+}
+.content-2 {
+  background-color: #eee;
+  width: 50px;
+  margin-right: 20px;
+  padding: 10px;
+  height: 55.5px;
+  float: left;
+  font-size: 50px;
+  text-align: center;
+}
+.content-3 {
+  position: relative;
+  background-color: #eee;
+  padding: 10px;
+  width: 600px;
+  float: left;
+  margin-bottom: 20px;
+}
+.content-3::before {
+  /* Display Is Inline
+    You Need To Make It Inline-Block */
+  position: absolute;
+  content: counter(members-counter);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  background-color: red;
+  color: white;
+  top: 50%;
+  margin-top: -10px;
+  left: -18px;
+  /* border-color: transparent green transparent transparent;
+    border-width: 10px;
+    border-style: solid;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    left: -20px; */
+  /* Its To Make It Heddin To Make Counter */
+}
+.content-1::after {
+  content: counter(members-counter); /* To Make All Div */
+  content: "Mohamed";
+  position: absolute;
+  background-color: black;
+  color: white;
+  top: 50%;
+  margin-top: -22.25px;
+}
+/* To Make data Text */
+.d-t-1 {
+  position: relative;
+  overflow: hidden;
+  clear: both;
+}
+.d-t-2 {
+  background-color: #eee;
+  width: 50px;
+  margin-right: 20px;
+  padding: 10px;
+  height: 55.5px;
+  float: left;
+  font-size: 50px;
+  text-align: center;
+}
+.d-t-3 {
+  position: relative;
+  background-color: #eee;
+  padding: 10px;
+  width: 600px;
+  float: left;
+  margin-bottom: 20px;
+}
+.d-t-3::before {
+  content: attr(data-text);
+  background-color: black;
+  color: white;
+  top: 50%;
+  margin-top: -22.25px;
+}
+/* To make data Text And Hover */
+.d-th-1 {
+  position: relative;
+  overflow: hidden;
+  clear: both;
+}
+.d-th-2 {
+  background-color: #eee;
+  width: 50px;
+  margin-right: 20px;
+  padding: 10px;
+  height: 55.5px;
+  float: left;
+  font-size: 50px;
+  text-align: center;
+}
+.d-th-3 {
+  position: relative;
+  background-color: #eee;
+  padding: 20px;
+  height: 70px;
+  width: 600px;
+  float: left;
+  margin-bottom: 20px;
+}
+.d-th-3::before {
+  content: attr(data-text);
+  display: none;
+  background-color: black;
+  color: white;
+  top: 50%;
+  margin-top: -22.25px;
+}
+.d-th-3:hover::before {
+  content: attr(data-text);
+  display: block;
+  background-color: black;
+  color: white;
+  top: 50%;
+  margin-top: -22.25px;
+  text-align: center;
+}
+/* To Design The Ul  */
+ul {
+  list-style: none;
+}
+ul li {
+  position: relative;
+  margin: 10px;
+}
+ul li::before {
+  content: "";
+  border-color: transparent green transparent transparent;
+  border-width: 10px;
+  border-style: solid;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  left: -30px;
+}
+/* #37 - End - Pseudo Element _ Conent And Trainings */

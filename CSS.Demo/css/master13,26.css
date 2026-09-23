@@ -1,0 +1,270 @@
+
+/* # Lesson 13 */
+.one {
+    padding: 15px;
+    border-bottom: 2px solid red;
+    background-color: #eee;
+    color: red;
+    margin: 10px 0;
+}
+.two {
+    padding: 15px;
+    border-bottom: 2px solid green;
+    background-color: #eee;
+    color: green;
+    margin: 10px 0;
+}
+.three {
+    padding: 15px;
+    border-bottom: 2px solid blue;
+    background-color: #eee;
+    color: blue;
+    margin: 10px 0;
+}
+.four {
+    padding: 15px;
+    border-bottom: 2px solid black;
+    background-color: #eee;
+    color: black;
+    margin: 10px 0;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five{
+    border-top: solid 2px yellow;
+    font-size: medium;
+} 
+/* # 14-Lesson nesting  */
+div .nesting{
+    color: red;
+}
+/* # 15-Dimensions- Width And Height */
+.dimensions{
+    display: block;
+    background-color: blueviolet;
+    width: fit-content; 
+
+     /*Fit-Content To Make Element Take A Width 
+    Of Content */
+
+    /* Its To Make dimensions Width,Height When 
+    Display Element inline-block This is note 
+    Best Practice */
+   
+    /* 
+      display: inline-block;
+      min-width: 300px;
+      max-width: 300px;
+      min-height: 150px;
+      max-height: 150px;  */
+}
+/* #16-OverFlow- Overflow-X And Overflow-y */
+.over-1{
+    background-color: aquamarine;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;  /* default visible,   scroll, auto */
+}
+.over-2{
+    background-color: forestgreen;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    overflow-x: hidden;  /*visible, scroll, auto */
+}
+.over-3{
+    background-color: blue;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    overflow-y: hidden;  /*visible, scroll, auto  its scroll down becouse the space*/
+}
+/* # 17 - Texxxxxxxxxt - Color and Shadow */
+
+/* 
+Text-Color
+-background-Color
+-Color
+-Text Shadow
+Syntax =>  text-shadow: H-Shadow V-Shadow Blur Color
+ */
+ .coloshad{
+    background-color: #f9f9f9;
+    /* color: rebeccapurple */
+    text-shadow: 10px -5px 1px red;
+ }
+ /* # 18 - Texxxxxxxxxt - Alignment*/
+ 
+ .text-lign{
+    background-color: #f9f9f9;
+    text-align: center;
+    direction: ltr;
+ }
+ .text-lign img{
+    vertical-align: middle;  
+     /* It's Make In Block, 
+    Inline-Block Element Only */
+ }
+ /* # 19 -Texxxxxxxxxt - Decoration And Tansform */
+ .decora{
+    text-decoration:none; /*it's make title font change */
+    background-color: red;
+    border-radius: 3px;
+    transform: none;
+    padding: 10px;
+    margin: 20px;
+    color: white;
+   
+ }
+ .trans{
+    background-color: bisque;
+    transform: none;
+    padding: 10px;
+    margin: 20px;
+    color: white;
+    text-transform: uppercase;
+    width: fit-content;
+ }
+/* # 20 -Texxxxxxxxxt -Spacing */
+.l-space{
+    letter-spacing: 5px; /* its control the space between words */
+}
+.t-indent{
+    text-indent: 20px; /* its control the space before the sentence */
+}
+.line-height{
+    line-height: 4.6; /* its defult 1.6 to read */
+}
+.word-spacing{
+    word-spacing: 15px; /*its make space betwen word */
+}
+.w-space{
+    width: 250px;
+    height: 200px;
+    background-color: aliceblue;
+    white-space: nowrap; /*defult white-space : wrap;
+    its make a word wrap in div */
+}
+.w-break{
+    width: 150px;
+    height: 100px;
+    background-color: aliceblue;
+    word-break: break-word;  /*break the text from any point*/
+}
+.w-break2{
+    width: 150px;
+    height: 100;
+    background-color: aliceblue;
+    word-break: break-word;  /*its break text from end word*/
+}
+/* # 21 - Texxxxxxxxxt - Overflow And Use Cases */
+.over-cases{
+    background-color: #ddd;
+    padding: 10px;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden; /*its to make the over Flow out div Visible */
+    text-overflow: ellipsis; /* its to make the end of title dotted */
+}
+/* # 22 - inheritance */
+.body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.inher{
+    text-align: center;
+    padding: 20px;
+    background-color: #EEE;
+    font-size: 20px;
+    border: 2px solid rgb(44, 13, 13);
+}
+.inher-2{
+    border: 2px solid;
+    border-color: inherit;
+    padding: inherit;  /*ده لتوريث الخواص بتاعه الاب */
+}
+/* # 23 - Typograohy - Font Family */
+.with-ser{
+    font-family: 'Times New Roman', Times, serif;
+}
+.san-ser{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.goog-font{
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+} /* Its Form Google Fonts */  
+
+.with-ser,
+.san-ser,
+.goog-font{
+    background-color: #ddd;
+    padding: 10px;
+}
+/* # 24 - Typography - Font Size & Css Units */
+.fz-father{
+    background-color: #EEE;
+    color: black;
+    line-height: 1.6;
+    font-size: 30px;
+}
+.fz-unit1{
+    font-size: 2em; /*from father 2em => 60px */ 
+}
+.fz-unit2{
+    font-size: 5rem; /* from body =>16px 5rem => 80px */
+}
+.fz-unit3{
+    font-size: 80%; /* 80%=>24px 100% =>30px */
+}
+.fz-unit4{
+    font-size: 40vw; /* vw => 1% from Father   10vw =>30px */
+}
+/* # 25 - Typography - Font style & Variant & Weight */
+.f-s,
+.tex-tra,
+.f-v,
+.f-w{
+    background-color: #EEE;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.f-s{
+    font-style: oblique;
+}
+.tex-tra{
+    text-transform: uppercase; 
+}
+.f-v{
+    font-variant: small-caps; /* to make a word small */
+}
+.f-w{
+    font-weight: bold; 
+ /* it's usualy used */
+}
+/* We Can Use Normal In Any cases */
+/* # 26 - Mouse Cursor */
+button{
+    background-color: transparent;
+    border: 1px black solid;
+    color: red;
+    font-weight: bold;
+}
+.point{
+    cursor: pointer; /* to chang the behevior of Mouse 
+    To Clicky*/
+}
+p{
+    cursor: crosshair; /* Its To Make Zoom When Mouse Mark With Mouse */
+}
+
+
+

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam.27,33</title>
+    <style>
+        /* Start Exam_1 */
+        .exam-1{
+            background-color: #eee;
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+        
+        .green,
+        .red,
+        .blue,
+        .black{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            right: 140px;
+            top: 40px;
+        }
+        .green{
+            background-color: green;
+            right: 130px;
+            top: 70px;
+            z-index: 4;
+        }
+        .red{
+            background-color: red;
+            z-index: 5;
+            right: 120px;
+            top: 80px;
+        }
+        .blue{
+            background-color: blue;
+            right: 140px;
+            top: 60px;
+            z-index: 1;
+        }
+        .black{
+            background-color: black;
+            top: 70px;
+            z-index: 0;
+        }
+        /* End Exam_1 */
+        /* Start Exam_2 */
+        .e-2{
+            white-space: pre-wrap;
+            height: 150px;
+            text-align: center;
+            position: relative;
+            background-color: #eee;
+            width: 400px;
+            margin: auto;
+            font-size: 18px;
+            border: 3px solid #ff6900;
+            border-left: 3px solid #0075ff ;
+            border-right: 3px solid #0075ff ;
+        }
+        span{
+            position: absolute;
+        }
+        .top-left{
+            width: 20px;
+            background-color: #0075ff;
+            top: -10px;
+            left: -10px;
+            text-align: center;
+            border-right: 3px solid #ff6900;
+        }
+        .bottom-left{
+            width: 20px;
+            background-color: #0075ff;
+            bottom: -10px;
+            left: -10px;
+            text-align: center;
+            border-right: 3px solid #ff6900;
+        }
+        .top-right{
+            width: 20px;
+            background-color: #0075ff;
+            top: -10px;
+            right: -10px;
+            text-align: center;
+            border-left: 3px solid #ff6900;
+        }
+        .bottom-right{
+            width: 20px;
+            background-color: #0075ff;
+            bottom: -10px;
+            right: -10px;
+            text-align: center;
+            border-left: 3px solid #ff6900;
+        }
+        /* End Exam_2 */
+        /* Start Exam_3 */
+        .section-1,
+        .section-2,
+        .section-3{
+            background-color: #ddd;
+            list-style: none;
+            margin: 10px;
+            margin-left: 200px;
+            padding: 10px;
+        }
+        .section-1 li{
+            background-color: #eee;
+            padding: 5px;
+            margin: 5px;
+        }
+        .section-2 li{
+            background-color: #eee;
+            list-style-type: upper-roman;
+            padding: 5px;
+            margin: 5px;
+        }
+        .section-3 li{
+            background-color: #eee;
+            list-style: inside;
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-left: 0px;
+        }
+        .section-3 ul{
+            padding-left: 0px;
+        }
+        /* End Exam_3 */
+        /* Start Exam_4 */
+        h3{
+            text-align: center;
+        }
+        table{
+            background-color: #ddd;
+            width: 700px;
+            border-spacing: 0;
+            border: 2px solid #eee;
+        }
+        table td{
+            border: 2px solid #eee;
+        }
+        table thead td{
+            color: white;
+            background-color: #373636;
+            padding: 20px;
+            text-align: center;
+        }
+        /* End Exam_4 */
+    </style>
+</head>
+<body>
+    <!-- Exam_1 -->
+    <div class="exam-1">
+    <div class="green"></div>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="black"></div>
+    </div>
+    <hr>
+    <!-- Start Exam_2 -->
+     <div class="e-2">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, sed. Ea ipsum
+  similique quasi rem, fugiat voluptatibus reiciendis nam debitis earum quo veniam
+  laudantium mollitia atque! Laborum ea nam doloribus.
+  <span class="top-left">1</span>
+  <span class="bottom-left">2</span>
+  <span class="top-right">3</span>
+  <span class="bottom-right">4</span>
+</div>
+<hr>
+<!-- End Exam_2 -->
+<!--Start Exam_3 -->
+<ul>
+  <li class="section-1">
+    HTML
+    <ol start="10">
+      <li>Slim</li>
+      <li>Pugjs</li>
+      <li>HAML</li>
+    </ol>
+  </li>
+  <li class="section-2">
+    CSS
+    <ol>
+      <li>SASS</li>
+      <li>LESS</li>
+      <li>PostCSS</li>
+    </ol>
+  </li>
+  <li class="section-3">
+    JavaScript
+    <ul>
+      <li>Vuejs</li>
+      <li>Sveltejs</li>
+    </ul>
+  </li>
+</ul>
+<hr>
+<!--End Exam_3 -->
+<!--Start Exam_4 -->
+<h3>Developers Rating</h3>
+ <table>
+    <thead>
+        <tr>
+            <td>Avatar</td>
+            <td>Group</td>
+            <td>Name</td>
+            <td>Points</td>
+            <td>Control</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img src="./css.boy1.png" alt="boy"></td>
+            <td>Ninja</td>
+            <td>Ahmed Mohamed</td>
+            <td>120</td>
+            <td><button>View</button>
+            <button>Delete</button></td>
+        </tr>
+        <tr>
+            <td><img src="./css.boy1.png" alt="boy"></td>
+            <td>Shady Nabil</td>
+            <td>180</td>
+            <td><button>View</button>
+            <button>Delete</button></td>
+        </tr>
+        <tr>
+            <td><img src="./css.girl1.png" alt="girl"></td>
+            <td>Eman Mohamed</td>
+            <td>160</td>
+            <td><button>View</button>
+            <button>Delete</button></td>
+        </tr>
+        <tr>
+            <td><img src="./css.boy1.png" alt="boy"></td>
+            <td>Mohamed Ibrahim</td>
+            <td>190</td>
+            <td><button>View</button>
+            <button>Delete</button></td>
+        </tr>
+        <tr>
+            <td><img src="./css.girl1.png" alt="girl"></td>
+            <td>Noor Atef</td>
+            <td>110</td>
+            <td><button>View</button>
+            <button>Delete</button></td>
+        </tr>
+        <tr>
+            <td><img src="./css.boy1.png" alt="boy"></td>
+            <td>Union</td>
+            <td>Mahmoud Adel</td>
+            <td>90</td>
+            <td><button>View</button>
+            <button>Delete</button></td>
+        </tr>
+
+    </tbody>
+ </table>
+</body>
+</html>

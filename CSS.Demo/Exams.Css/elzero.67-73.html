@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam-67-73</title>
+    <style>
+        :root {
+            --main-color: #FF5722;
+            --second-color: white;
+        }
+
+        .e-1 {
+            width: 150px;
+            background-color: var(--main-color);
+            color: var(--second-color);
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto;
+        }
+
+        .e-1::after,
+        .e-1::before {
+            content: "Elzero";
+            position: absolute;
+            width: 150px;
+            padding: 10px;
+            margin: auto;
+            text-align: center;
+            background-color: var(--main-color);
+            color: var(--second-color);
+        }
+
+        .e-1::after {
+            transform: skew(10deg, 10deg);
+            z-index: -1;
+        }
+
+        .e-1::before {
+            transform: skew(-10deg, -10deg);
+            z-index: -2;
+        }
+
+        .e-2 {
+            background-color: #009688;
+            color: white;
+            width: 150px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            position: relative;
+            /* z-index: -1; */
+        }
+
+        .e-2::before {
+            content: "";
+            position: absolute;
+            background-color: #009688;
+            width: 20px;
+            height: 100%;
+            top: 0;
+            left: -10px;
+            transform: skewX(15deg);
+            border-right: white solid 5px;
+            /* z-index: 1; */
+        }
+
+        /* 
+        Exam-3
+        .class {
+            matrix(3, 0.2679, 0, 3, 20, 100);
+           /* transform: translateX(20) translateY(100) scaleX(3) scaleY(3) skewX(0) skewY(0.2679)  */
+        .e-4 {
+            background-color: #607D8B;
+            color: white;
+            width: 200px;
+            margin: 200px auto;
+            border-bottom: 7px solid black;
+            height: 200px;
+            padding: 6px;
+            position: relative;
+        }
+
+        .e-4::before {
+            content: "Elzero";
+            font-family: sans-serif;
+            position: absolute;
+            font-size: 15px;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .e-4::after {
+            content: "";
+            position: absolute;
+            width: 136.4px;
+            height: 136.4px;
+            background-color: black;
+            border: 7px solid white;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .card {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin: 20px auto;
+            perspective: 700px;
+        }
+
+        .card::before,
+        .card::after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            transition: transform 1s ease-in-out;
+            backface-visibility: hidden;
+        }
+
+        .card::before {
+            content: "Front";
+            background-color: #FA3664;
+            transform: rotateY(0deg);
+        }
+
+        .card::after {
+            content: "Back";
+            background-color: #1692fc;
+            transform: rotateY(180deg);
+        }
+
+        .card:hover::before {
+            transform: rotateY(-180deg);
+        }
+
+        .card:hover::after {
+            transform: rotateY(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="e-1">Elzero</h1>
+    <hr>
+    <hr>
+    <hr>
+    <h1 class="e-2">Elzero</h1>
+    <hr>
+    <hr>
+    <hr>
+    <div class="e-4"></div>
+    <hr>
+    <hr>
+    <hr>
+    <div class="card"></div>
+
+</body>
+
+</html>

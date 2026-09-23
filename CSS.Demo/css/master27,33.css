@@ -1,0 +1,168 @@
+body{
+    height: 5000px;
+}
+hr{ 
+    margin: 30px 0px;
+    border: 3px dotted black;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+    
+}
+/* #27 - Float And Clear */
+.float{
+    background-color: red;
+    padding: 10px;
+}
+
+.float div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #eee;
+    width: 25%;
+    float: left;
+}
+.clear{
+    clear: both;
+}
+/* #28 Mastering The css Calculation */
+.calcu{
+    margin: 0px;
+}
+.calcu div{
+/* box-sizing: border-box;  /*To fix When element don't Work*/ 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #eee;
+    width: calc((100% - 60px)/ 5);
+    float: left;
+    margin-left: 10px;
+}
+.clear-2{
+    clear: both;
+}
+    /*
+    --Content Width Is: 100%
+    --6 Spaces 10px * 6 => 60px => From Content Width
+    --100% - 60px * 6 Available Space  In 5 Element
+    --5 Element The Width Is ((100% - 60px)/5)
+    */
+/* #29 - Opacity  */
+    /* When I Use A PopUp Screen It's Make 0.5 Percent */
+.opa{
+    background-color: green;
+    color: black;
+    text-align: center;
+    opacity: 1;
+    padding: 10px;
+}
+.opac{
+    background-color: green;
+    color: black;
+    text-align: center;
+    opacity: 0.5;
+    padding: 10px;
+}
+/* #30 - Position  
+       rules of position
+       -static
+       -absolut 
+       -relative
+       -fixed
+       -sticky */
+       .rela{
+        background-color: yellow;
+        width: 400px;
+        height: 400px;
+        margin: 30px;
+        position: relative;
+        top: 20px;
+        left: 20px;
+       }
+       .abs{
+        background-color: blue;
+        width: 40px;
+        padding: 20px;
+        position: absolute;
+        top: 20px;
+        right: 200px;
+        overflow: auto;
+       }
+       .stick{
+        background-color: aqua;
+        color: black;
+        padding: 10px;
+        overflow: hidden;
+        position: sticky;
+        top: 20px;
+        text-align: center;
+       }
+       .fix{
+        background-color: black;
+        color: white;
+        bottom: 10px;
+        right: 10px;
+        position: fixed;
+        padding: 5px;
+        border: 5px pink solid;
+       }    
+/* #31 - z-index */
+       .z-con{
+        min-height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 30px;
+       }
+       .one,
+       .two,
+       .three{
+        text-align: center;
+        color: white;
+        padding: 10px;
+        width: 100px;
+        position: absolute;
+       }
+       .one{ /* Its Last But I Need It Betwen */
+        background-color: red;
+        z-index: 1;
+       }
+       .two{ /* Its Betwen I Need It Frist */
+        background-color: blue;
+        margin-left: 10px;
+        margin-top: 10px;
+        z-index: 2; 
+        /* Heigher Number Its Come First */
+       }
+       .three{  /*Its Show First  But I Need It Last*/
+        background-color: green;
+        margin-left: 20px;
+        margin-top: 20px;
+        z-index: 0;
+       }
+/*  #32 - Lists style*/
+ul{
+    list-style: none; /* We Can Use Type - Position - Image To Replace Bolit */
+    padding-left: 0px;
+}
+/* #33 - Table Styling */
+.tabl table{
+    width: 100%;
+    border-spacing: 0px;
+}
+.tabl td{
+    padding: 15px;
+    background-color: #eee;
+    border: 1px solid #a09999;
+}
+.tabl thead td{
+    background-color: red;
+    font-weight: bold;
+    color: #eee;
+    border: 0px;
+    text-align: center;
+}

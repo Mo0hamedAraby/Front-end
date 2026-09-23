@@ -1,0 +1,77 @@
+/* #61-Grid-Child-Grid Column & Grid Row 
+    -- We Have Many Status Column  Grid-column[div1/3, span 3, 2/span 4 ] 
+    -- We Have Many Status Row  Grid-Row[div1/3, span 3, 2/span 4 ] 
+    */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h3 {
+  color: white;
+  background-color: black;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: center;
+}
+.l-61 {
+  margin: 20px auto;
+  width: 800px;
+  height: 700px;
+  background-color: #ddd;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px 10px;
+}
+.l-61 div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+/* 62-Grid-Child-Grid Area And Trainings 
+----One Grid-Template-Areas And Make Grid Area For Any Div I Need It  */
+
+.l-62 {
+  margin: 20px auto;
+  width: 800px;
+  height: 700px;
+  background-color: #ddd;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px 10px;
+  grid-template-areas: "thr thr thr fou fou"; /* This Is Statu*/
+}
+.l-62 div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+/* #63 - Grid - Min, max And Auto Fill 
+ Grid-Template Columns: Repeat(Auto-fill, Minmax(StartWidth (px or Auto Or Fr), EndWidth(px or Auto Or Fr) )) */
+.l-63 {
+  margin: 20px auto;
+  height: 500px;
+  background-color: #eee;
+  display: grid;
+  gap: 10px 10px;
+  grid-template-columns: repeat(
+    Auto-fill,
+    Minmax(200px, 1fr)
+  ); /* Its Make Div Responsiv */
+}
+.l-63 div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}

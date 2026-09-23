@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam-65-67</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .e-1 {
+            position: relative;
+            display: flex;
+            color: #0075ff;
+            background-color: #eee;
+            width: 300px;
+            height: 200px;
+            margin: 40px auto;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 50px;
+
+        }
+
+        .e-1::before {
+            position: absolute;
+            content: "";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 200px;
+            background-color: #0075ff;
+            transform: rotate(5deg);
+            z-index: -1;
+        }
+
+        .e-1::after {
+            position: absolute;
+            content: "";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 200px;
+            background-color: #E91E63;
+            transform: rotate(-5deg);
+            z-index: -3;
+        }
+
+        .e-2 {
+            width: 200px;
+            height: 200px;
+            background-color: #eee;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 200px;
+            font-size: 30px;
+            font-weight: bold;
+            border-bottom: 5px solid #E91E63;
+            border-top: 5px solid #E91E63;
+            border-right: 5px solid #E91E63;
+            border-bottom: 10px solid #0075ff;
+            border-top: 10px solid #0075ff;
+            border-left: 10px solid #0075ff;
+        }
+
+        .e-2::before {
+            content: "";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="e-1">Elzero</div>
+    <hr>
+    <hr>
+    <hr>
+    <div class="e-2">Elzero</div>
+</body>
+
+</html>

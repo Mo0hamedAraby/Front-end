@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    /* Start Exam_1 */
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    .grid-1 {
+      margin: 10px auto;
+      background-color: #ddd;
+      padding: 20px;
+      width: 800px;
+      height: 400px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 50px 1fr;
+      grid-template-areas:
+        "one two three"
+        "four five six";
+      gap: 20px 20px;
+    }
+
+    .grid-1 div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      background-color: #607d8b;
+      font-size: large;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .grid-1 div:nth-child(1):before {
+      grid-area: one;
+      content: "Element 1";
+    }
+
+    .grid-1 div:nth-child(2):before {
+      grid-area: two;
+      content: "Element 2";
+    }
+
+    .grid-1 div:nth-child(3):before {
+      grid-area: three;
+      content: "Element 3";
+    }
+
+    .grid-1 div:nth-child(4):before {
+      grid-area: four;
+      content: "Element 4";
+    }
+
+    .grid-1 div:nth-child(5):before {
+      grid-area: five;
+      content: "Element 5";
+    }
+
+    .grid-1 div:nth-child(6):before {
+      grid-area: six;
+      content: "Element 6";
+    }
+
+    /* End Exam_1 */
+    /* Start Exam_2 */
+    .layout {
+      margin: 20px 0;
+      height: 90vh;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 50px 1fr 50px;
+      grid-template-areas:
+        "head head head head head "
+        "sec sec sec sec side "
+        "foo foo foo foo foo ";
+    }
+
+    header {
+      grid-area: head;
+      background-color: #03a9f4;
+    }
+
+    header::before {
+      content: "Header";
+      line-height: 50px;
+      padding: 0 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      color: white;
+    }
+
+    section {
+      grid-area: sec;
+      background-color: #ff5722;
+    }
+
+    section::before {
+      content: "Section";
+      padding: 20px;
+      line-height: 50px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      color: white;
+    }
+
+    aside {
+      grid-area: side;
+      background-color: #607d8b;
+    }
+
+    aside::before {
+      content: "aside";
+      padding: 20px;
+      line-height: 50px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      color: white;
+    }
+
+    footer {
+      grid-area: foo;
+      background-color: #009688;
+    }
+
+    footer::before {
+      content: "Footer";
+      padding: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      color: white;
+      line-height: 50px;
+    }
+
+    /* End Exam_2 */
+    /* Start Exam_3 */
+    .grid-2 {
+      background-color: #ddd;
+      padding: 20px;
+      width: 800px;
+      height: 400px;
+      display: grid;
+      margin: 10px auto;
+      grid-template-columns: auto 1fr 1fr auto;
+      grid-template-rows: 1fr auto;
+      gap: 10px 10px;
+    }
+
+    .grid-2 div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #403f3f;
+      color: white;
+    }
+
+    /* End Exam_3 */
+    /* Start Exam_4 */
+    .grid-3 {
+      background-color: #ddd;
+      padding: 20px;
+      width: 800px;
+      height: 400px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      gap: 10px 10px;
+      margin: 10px auto;
+    }
+
+    .grid-3 div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #2196f3;
+      color: white;
+    }
+
+    .grid-3 .one {
+      grid-column: 1 / span 3;
+      grid-row: 6;
+    }
+
+    .grid-3 .two {
+      grid-column: span 2;
+      grid-row: 2;
+    }
+
+    .grid-3 .five {
+      grid-column: span 2;
+      grid-row: span 3;
+    }
+
+    .grid-3 .eight {
+      grid-column: 1 / span 3;
+      grid-row: 1;
+    }
+
+    /* End Exam_4 */
+    /* Start Exam_5 */
+    .grid-4 {
+      background-color: #ddd;
+      padding: 20px;
+      width: 800px;
+      height: 400px;
+      margin: 10px auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 20px 20px;
+      gap: 10px 10px;
+      align-content: space-between;
+    }
+
+    .grid-4 div {
+      background-color: #E91E63;
+      color: white;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    /* End Exam_5 */
+    /* Start Exam_6 */
+    .e-6 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 10px 10px;
+      background-color: #ddd;
+    }
+
+    .e-6 div {
+      position: relative;
+    }
+
+    .e-6 div::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: #ff4e16;
+      bottom: 0;
+      /* border-bottom: 3px solid #ff4e16; */
+    }
+
+    img {
+      position: absolute;
+      width: 10px;
+      bottom: 10px;
+      right: 10px;
+      filter: brightness(0) invert(50%);
+    }
+
+    .e-6 .one {
+      grid-column: span 2;
+    }
+
+    .e-6 .three {
+      grid-row: span 3;
+    }
+
+    .e-6 .four {
+      grid-row: span 2;
+    }
+
+    .e-6 .five {
+      grid-column: span 2;
+    }
+
+    .e-6 .six {
+      grid-column: span 2;
+    }
+
+    /* End Exam_6 */
+  </style>
+</head>
+
+<body>
+  <div class="grid-1">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="layout">
+    <header></header>
+    <section></section>
+    <aside></aside>
+    <footer></footer>
+  </div>
+  <div class="grid-2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+  </div>
+  <div class="grid-3">
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div class="three">3</div>
+    <div class="four">4</div>
+    <div class="five">5</div>
+    <div class="six">6</div>
+    <div class="seven">7</div>
+    <div class="eight">8</div>
+  </div>
+  <div class="grid-4">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+  <div class="e-6">
+    <div class="one">
+      <h2>Osama Mohamed</h2>
+      <h3>Full-Stack Developer</h3>
+      <img src="../talka.svg" alt="logo Design">
+      <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus unde, repudiandae architecto veritatis
+          non rerum. Consequatur in laborum cum repellat cumque officiis </span> voluptatibus architecto, deleniti enim
+        eaque qui perspiciatis odio?</p>
+    </div>
+    <div class="two">
+      <h2>Ahmed Sayed</h2>
+      <h3>IOS Developer</h3>
+      <img src="../talka.svg" alt="logo Design">
+      <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi corporis sint alias possimus harum
+          illum</span> blanditiis repudiandae rem. Et omnis officiis minus voluptas nihil est! Perferendis consectetur
+        ipsum quo amet!</p>
+    </div>
+    <div class="three">
+      <h2>Shady Nabil</h2>
+      <h3>Full-Stack Developer</h3>
+      <img src="../talka.svg" alt="logo Design">
+      <p> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia odit quae esse eaque facere aliquam sit
+          mollitia praesentium officiis amet. Dolor quo labore</span> voluptate suscipit atque, aliquid non quaerat
+        quas?</p>
+    </div>
+    <div class="four">
+      <h2>Mohamed Ibrahim</h2>
+      <h3>.Net Developer</h3>
+      <img src="../talka.svg" alt="logo Design">
+      <p><span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quidem deserunt omnis nam quisquam
+          mollitia rem veritatis</span> suscipit illum autem, sint incidunt quis laboriosam aliquam voluptatibus a amet
+        earum cupiditate!</p>
+    </div>
+    <div class="five">
+      <h2>Mohamoud Mohamed</h2>
+      <h3>Full-Stack Developer</h3>
+      <img src="../talka.svg" alt="logo Design">
+      <p><span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </span>Illo deserunt expedita quia nesciunt
+        iusto iure. Ipsum consequatur nulla iure, sequi nihil cumque quas quia. Veniam, asperiores minus. Facilis, sunt!
+        Quam.</p>
+    </div>
+    <div class="six">
+      <h2>Ezz Eldin</h2>
+      <h3>Front-End Developer</h3><img src="../talka.svg" alt="logo Design">
+      <p><span>Lorem, ipsum dolor sit amet consectetur adipisicing </span> Error earum quam maiores aspernatur, adipisci
+        tempore possimus laboriosam illum neque rem eaque consequuntur libero ut ipsum sint. Illo labore non laboriosam?
+      </p>
+    </div>
+    <div class="seven">
+      <h2>Mohamed Sayed</h2>
+      <h3>IOS Developer</h3>
+      <img src="../talka.svg" alt="logo Design">
+      <p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span> Qui labore reprehenderit molestiae
+        beatae aliquid. Assumenda voluptatem imp</p>
+    </div>
+    <div class="eight">
+      <h2>Ibrahim Sayed</h2>
+      <h3>IOS Developer</h3>
+      <img src="../talka.svg" alt="logo Design">
+      <p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span> Qui labore reprehenderit molestiae
+        beatae aliquid. Assumenda voluptatem imp</p>
+    </div>
+    <div class="nine">
+      <h2>Gamal Sayed</h2>
+      <h3>IOS Developer</h3>
+      <img src="../talka.svg" alt="logo Design">
+      <p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span> Qui labore reprehenderit molestiae
+        beatae aliquid. Assumenda voluptatem imp</p>
+    </div>
+    <div class="ten">
+      <h2>Eman Sayed</h2>
+      <h3>IOS Developer</h3>
+      <img src="../talka.svg" alt="logo Design">
+      <p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span> Qui labore reprehenderit molestiae
+        beatae aliquid. Assumenda voluptatem imp</p>
+    </div>
+  </div>
+</body>
+
+</html>

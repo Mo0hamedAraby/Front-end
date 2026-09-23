@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale">
+<meta name="discription" content="This Website To Forms And Label">
+</head>
+<body>
+    <form action="test.py" method="post">
+        <label>Username</label>
+        <input type="text" name="username" required placeholder="Type your First Name" >
+        <hr>
+        <label>Password</label>
+        <input type="password" name="pass" placeholder="Type Right Password">
+        <hr>
+        <label>Mobile</label>
+        <input type="text" name="mobile" value="+0100(23)123" placeholder="Type Your Phone Number ">
+        <hr>
+        <label>Email</label>
+        <input type="text" name="mail" required placeholder="Enter Your Mail ">
+        <hr>
+        <label>Subject</label>
+        <input type="text" name="Subject" placeholder="Give Me A Discription About you">
+        <hr>     
+        <label>hidden</label>
+        <input type="hidden" value="30">
+        <hr>
+        <input type="reset" value="Empty Form">
+        <input type="submit" value="Send Data">
+    </form>
+    <form method="post">
+        <label>Range</label>
+        <input step="50" type="range" min="100" max="500" value="500">
+    </form>
+</body>
+ </html>

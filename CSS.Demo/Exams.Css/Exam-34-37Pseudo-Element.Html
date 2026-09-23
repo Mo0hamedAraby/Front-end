@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam-34-37 Css</title>
+    <style>
+      /* Exam-1 */
+      body {
+        height: 1000vh;
+        box-sizing: border-box;
+      }
+      .e-1 {
+        background-color: #eee;
+        width: 300px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        margin: 20px auto;
+      }
+      .e-1:empty {
+        background-color: red;
+      }
+      /*Start Exam-2 */
+      .e-2 {
+        position: relative;
+        font-family: "Cairo", sans-serif;
+        background-color: #abb8c3;
+        width: 300px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        align-items: center;
+        margin: 20px auto;
+      }
+      .e-2::first-letter {
+        display: inline-block;
+        background-color: red;
+        color: white;
+        padding: 15px 10px;
+        margin-left: -15px;
+      }
+      /* End- Exam-2 */
+      /* Start - Exam - 3  */
+      .flo {
+        position: relative;
+        background-color: #eee;
+        width: 600px;
+        padding: 20px;
+        margin: 20px auto;
+        border-left: 10px solid #e91e63;
+      }
+      .flo::before {
+        content: attr(data-person);
+        position: absolute;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+        left: -100px;
+        background-color: #eee;
+        bottom: 5%;
+      }
+      .flo::after {
+        content: "";
+        position: absolute;
+        left: -20px;
+        top: 0;
+        width: 10px;
+        height: 100%;
+        background-color: #e91e63;
+      }
+      .flo::after {
+        clip-path: polygon(0 50%, 100% 0, 100% 100%);
+        width: 20px;
+        height: 20px;
+        background-color: #e91e63;
+        top: 50%;
+        left: -28px;
+        transform: translateY(-50%);
+      }
+      /* End - Exam - 3 */
+      /* Start Exam - 4 To Make Members-counter  */
+      .Exam-4 p {
+        position: relative;
+        background-color: #eee;
+        width: 500px;
+        padding: 20px;
+        counter-increment: members-counter;
+        margin: 20px auto;
+      }
+      .Exam-4 p::before {
+        content: counter(members-counter);
+        position: absolute;
+        background-color: #f44336;
+        left: -30px;
+        top: 0;
+        width: 40px;
+        height: 100%;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .Exam-4 p::after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 5px;
+        right: 0;
+        top: 0;
+        background: #f44336;
+      }
+      /* End - Exam - 4 */
+    </style>
+  </head>
+  <body>
+    <div class="Exam-1">
+      <div class="e-1">One</div>
+      <div class="e-1"></div>
+      <div class="e-1">Three</div>
+    </div>
+    <hr />
+    <div class="Exam-2">
+      <div class="e-2">1 Hello, Welcome To Elzero Web School</div>
+    </div>
+    <hr />
+    <div class="Exam-3">
+      <p class="flo" data-person="Osama">
+        This Is Very Very Long Comment Number One
+      </p>
+      <p class="flo" data-person="Ahmed">
+        This Is Very Very Long Comment Number Two
+      </p>
+      <p class="flo" data-person="Sayed">
+        This Is Very Very Long Comment Number Three
+      </p>
+    </div>
+    <hr />
+    <div class="Exam-4">
+      <p>This Is Very Very Long Product Title</p>
+      <p>This Is Very Very Long Product Title</p>
+      <p>This Is Very Very Long Product Title</p>
+      <p>This Is Very Very Long Product Title</p>
+      <p>This Is Very Very Long Product Title</p>
+      <p>This Is Very Very Long Product Title</p>
+    </div>
+  </body>
+</html>

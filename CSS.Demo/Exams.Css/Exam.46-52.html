@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam-46-52</title>
+    <style>
+        .parent {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .e-1 {
+            position: relative;
+            display: flex;
+            width: 100px;
+            margin: 50px auto;
+            height: 100px;
+            background-color: #eee;
+            color: #ff6900;
+            font-size: 18px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+        }
+
+        .e-1::after {
+            display: flex;
+            content: "";
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            box-shadow: 5px 0 #ff6900;
+            border-radius: 100%;
+        }
+
+        .e-1::before {
+            display: flex;
+            content: "";
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            box-shadow: -5px 0 #0075ff;
+            border-radius: 100%;
+        }
+
+        .parent-2 {
+            display: flex;
+            width: 600px;
+            height: 300px;
+            margin: 20px auto;
+            background-color: #ddd;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-flow: wrap;
+            align-content: space-between;
+        }
+
+        .parent-2 div {
+            background-color: #f44336;
+            color: white;
+            width: calc(90% / 3);
+            text-align: center;
+            padding: 10px 0;
+            margin: 15px 0;
+        }
+
+        .parent-3 {
+            display: flex;
+            width: 600px;
+            height: 300px;
+            flex-flow: column wrap-reverse;
+            background-color: #ddd;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 10px auto;
+        }
+
+        .parent-3 div {
+            display: flex;
+            background-color: #607d8b;
+            width: calc(95% / 3);
+            align-items: center;
+            justify-content: center;
+            height: calc(96% / 2);
+        }
+
+        .one-3 {
+            order: 2;
+            flex-basis: 25%;
+            margin-top: 11.5%;
+        }
+
+        .two-3 {
+            order: 4;
+        }
+
+        .three-3 {
+            order: 3;
+            flex-basis: 25%;
+            margin-bottom: 11.5%;
+
+        }
+
+        .four {
+            order: 1;
+        }
+
+        .five {
+            order: 6;
+        }
+
+        .six {
+            order: 5;
+
+        }
+
+        .parent-4 {
+            display: flex;
+            background-color: #ddd;
+            width: 600px;
+            height: 300px;
+            margin: 30px auto;
+            justify-content: space-between;
+            align-items: center;
+            flex-flow: column nowrap;
+        }
+
+        .parent-4 .one {
+            display: flex;
+            align-self: flex-end;
+            background-color: #009688;
+            margin: 10px;
+            height: 100px;
+            width: 10%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parent-4 .two {
+            display: flex;
+            align-self: flex-start;
+            background-color: #009688;
+            margin: 10px;
+            height: 100px;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parent-4 .three {
+            display: flex;
+            align-self: flex-end;
+            background-color: #009688;
+            margin: 10px;
+            height: 100px;
+            width: 10%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parent-5 {
+            display: flex;
+            background-color: #ddd;
+            width: 600px;
+            height: 300px;
+            margin: 30px auto;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+
+        .one-5 {
+            display: flex;
+            order: 2;
+            width: 120px;
+            height: calc(50% - 10px);
+            color: white;
+            background-color: #ff9800;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .two-5 {
+            display: flex;
+            height: calc(50% - 10px);
+            width: 120px;
+            order: 3;
+            color: white;
+            align-self: self-end;
+            justify-content: center;
+            align-items: center;
+            background-color: #8bc34a;
+            margin-bottom: 10px;
+        }
+
+        .three-5 {
+            display: flex;
+            margin-top: 10px;
+            order: 4;
+            height: calc(50% - 10px);
+            width: 120px;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            background-color: #795548;
+        }
+
+        .four-5 {
+            display: flex;
+            order: 1;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            align-self: self-end;
+            height: calc(50% - 10px);
+            width: 120px;
+            background-color: #673ab7;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="e-1">Elzero</div>
+    </div>
+    <hr>
+    <div class="parent-2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <hr>
+    <div class="parent-3">
+        <div class="one-3">1</div>
+        <div class="two-3">2</div>
+        <div class="three-3">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+    </div>
+    <hr>
+    <div class="parent-4">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+    </div>
+    <hr>
+    <div class="parent-5">
+        <div class="one-5">1</div>
+        <div class="two-5">2</div>
+        <div class="three-5">3</div>
+        <div class="four-5">4</div>
+    </div>
+</body>
+
+</html>

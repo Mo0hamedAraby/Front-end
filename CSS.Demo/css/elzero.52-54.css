@@ -1,0 +1,106 @@
+body {
+  box-sizing: border-box;
+}
+h3 {
+  background-color: black;
+  color: white;
+  padding: 3px;
+  text-align: center;
+}
+/* ------Start Lesson - 54 - filters -------- */
+.i-1 {
+  display: block;
+  margin: 10px auto;
+  filter: grayscale(0);
+}
+.i-1:hover {
+  display: block;
+  margin: 10px auto;
+  filter: grayscale(100%);
+}
+.i-2 {
+  display: block;
+  margin: 10px auto;
+  filter: blur(2px); /* Its Make With Px */
+}
+.i-2:hover {
+  display: block;
+  margin: 10px auto;
+  filter: blur(0px);
+}
+.i-3 {
+  display: block;
+  margin: 10px auto;
+  filter: opacity(70%); /* Its Make With Handred Percent */
+}
+.i-3:hover {
+  display: block;
+  margin: 10px auto;
+  filter: opacity(100%);
+}
+/* ------End Lesson - 54 - filters -------- */
+/*------Start Lesson - 55 - Gredients -------- 
+--linear-gradient(Direction || Angle, Color Stop 1, Color Stop 2, ---)
+*/
+.g-1 {
+  background-image: linear-gradient(
+    to right,
+    /*We Can Use Deg
+      0=>deg=>To Top
+      180=>deg=>to Bottom
+      And We Can Add Color %
+    */
+    red 50%,
+    blue
+  );
+  height: 300px;
+  width: 800px;
+}
+.g-2 {
+  width: 400px;
+  height: 300px;
+  background-color: #ddd;
+  margin: 20px auto;
+  position: relative;
+  padding: 10px;
+}
+.g-2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -10px;
+  height: 10px;
+  background-color: red;
+  background-image: linear-gradient(
+    to right,
+    rgb(31, 190, 179) 10%,
+    rgb(136, 255, 0) 10%,
+    rgb(136, 255, 0) 20%,
+    rgb(0, 98, 255) 20%,
+    rgb(0, 98, 255) 30%,
+    rgb(0, 255, 110) 30%,
+    rgb(0, 255, 123) 40%,
+    rgb(234, 0, 255) 40%,
+    rgb(234, 0, 255) 50%,
+    rgb(0, 255, 145) 50%,
+    rgb(0, 255, 145) 60%,
+    rgb(255, 119, 0) 60%,
+    rgb(255, 119, 0) 70%,
+    rgb(255, 0, 247) 70%,
+    rgb(255, 0, 247) 80%,
+    rgb(0, 110, 255) 80%,
+    rgb(0, 110, 255) 90%,
+    rgb(123, 255, 0) 90%,
+    rgb(123, 255, 0) 100%
+  );
+}
+/*------End Lesson - 55 - Gredients --------*/
+/*------Start Lesson - 56 - Pointer Events And Caret Color --------*/
+.p-c-56 {
+  caret-color: red; /* To Make A Selection Of Text Red */
+}
+a {
+  pointer-events: none; /* To Make Any Clicky Not Clicked Like Games */
+}
+/*------End - 56 - Pointer Events And Caret Color --------*/

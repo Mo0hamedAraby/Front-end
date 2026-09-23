@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam-38-41</title>
+    <style>
+      .e1 div {
+        position: relative;
+        display: inline-block;
+        border: 5px solid black;
+        height: 150px;
+        width: 150px;
+        margin: 20px;
+        -webkit-border-radius: 10px;
+        border-radius: 50%;
+      }
+      .e1 div::before{
+        position: absolute;
+        content: counter("Element");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="e1">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

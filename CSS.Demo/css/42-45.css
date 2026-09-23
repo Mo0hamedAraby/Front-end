@@ -1,0 +1,134 @@
+h1 {
+  padding: 10px;
+  margin: 20px auto;
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* Start- Lesson -42-Transition */
+.l-42 {
+  background-color: #ddd;
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  /* To Now This Property Valid The Transition
+            - Visit This Website -
+         _ANIMATABLE CSS PROPERTIES_ */
+  transition-duration: 1s, 0.5s;
+  /* 1s= 1000ms Its To Make Time For Transition 
+    And We Can Add Two Value Her When We Have Two Value In Property */
+  transition-delay: 0.2s; /* Its To Make Delay In And Out */
+  transition-property: width, height; /* We Can Make Two Value In Property  */
+  transition-timing-function: ease-in-out;
+  /*  Anthor Value 
+  - ease - linear - ease-in - ease-out - ease-in-out
+  Its To Make Smoothing In And Out */
+  /* ABBREVIATION THE TRANSITION
+    _transition: Property Duration Delay Timing-Function */
+}
+.l-42:hover {
+  width: 280px;
+  height: 150px;
+}
+.l-42-1 {
+  background-color: #ddd;
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  /* This To Make Abbreviation */
+  transition: width 0.5s 0.2s linear;
+}
+.l-42-1:hover {
+  width: 280px;
+  height: 150px;
+}
+/* End - Lesson -42-Transition */
+/* Start - Lesson - 43 - Important Declaration And Useing Cases  */
+.l-43 {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  margin: 20px auto;
+}
+.l-43 {
+  background-color: red !important; /* This Is Element From Value To Make That Value Important */
+}
+/* End - Lesson - 43 - Important Declaration And Useing Cases  */
+/* Start - Lesson - 44 - The Margin Collapse  */
+/* ----- [1] Only Vertical Margin Collapse
+   ----- [2] Bigger Margin Wins
+   ----- [3] Margin Collapsing With Element Without Anything Between 
+              Like Hr Its Not Make Collapse
+         [4] Nesting Does Not Prevent Collapsing
+   */
+.l-44-parent {
+  margin: auto;
+  height: 200px;
+  width: 400px;
+  background-color: gray;
+}
+.l-44-1,
+.l-44-2 {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.l-44-1,
+.l-44-2 {
+  background-color: gray;
+}
+.l-44-2 .up {
+  background-color: red;
+  height: 80px;
+  margin-bottom: 20px;
+}
+.l-44-2 .down {
+  background-color: green;
+  height: 80px;
+  /* margin-top: 20px;*/
+  /* When Make Magrin Same In Div Its Collapse Him  */
+  margin-top: 40px;
+  /* When Make One Of Two Div The Margin Its Take Large Its Take Larger */
+}
+/* End - Lesson - 44 - The Margin Collapse  */
+/*  Start - Lesson - 45 - Variables And Trainings */
+:root{
+  --mainColor: blue;
+  --mainPadding:10px;
+}
+.main-45{
+  background-color: var(--mainColor);
+  color: white;
+  padding: calc(20px + var(--mainPadding));
+}
+h2{
+  color: var(--mainColor);
+  background-color: white;
+  padding: var(--mainPadding);
+}
+p{
+color: var(--mainColor);
+border: 2px solid var(--mainColor);
+padding: var(--mainPadding);
+}
+a{
+  color: black;
+}
+a:hover{
+
+  color: var(--mainColor);
+}
+.local{
+  --mainColor: black;
+  background-color: var(--mainColor);
+  color: white;
+  /* its Take From Private Variable
+  When We Did't Have Private Variable Its Take From Local 
+  */
+}
+/* End - Lesson - 45 - Variables And Trainings */

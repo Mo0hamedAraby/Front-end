@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* lesson 2 Style Color & Background-Color */
+        h1 {
+            color: green;
+            background-color: black;
+        }
+
+        /* Lesson 3 classes. and id# */
+        .orange {
+            color: orange;
+            background-color: black;
+        }
+
+        .red {
+            color: red;
+            background-color: black;
+        }
+
+        #blue {
+            color: blue;
+            background-color: black;
+        }
+
+        /* lesson 4 color property */
+        #colorproperty1 {
+            color: black;
+        }
+
+        #colorproperty2 {
+            color: rgb(0, 0, 0);
+        }
+
+        #colorproperty3 {
+            color: #000000;
+        }
+
+        #colorproperty4 {
+            color: rgba(0, 0, 0, 1);
+        }
+
+        /* Lesson 5 #Border Property  */
+        h1 {
+            border-style: dashed;
+            border-color: black;
+            border-radius: 10px;
+            border-bottom-style: solid;
+            border-bottom-color: green;
+            border-width: 20px;
+            border-top-style: solid;
+            border-top-color: red;
+            /* We Have A Abberviation like
+    -----To look The value Look At Note Book  */
+            border: solid 2px black;
+        }
+
+        /* Lesson 6 Height & Width Property 
+    --We Have Another Measurement Like --
+    -- %, cm, px
+    */
+        h1 {
+            width: 100px;
+            height: 50px;
+            max-width: 100px;
+            max-height: 10px;
+            min-width: 10px;
+            min-height: 1px;
+        }
+
+        /* Lesson 7 Browser Code Inspector */
+        h1 {
+            margin: 50px;
+            padding: 10px;
+        }
+
+        /* Lesson 9 Text Property */
+        #tarmez {
+            color: red;
+            background-color: green;
+            text-align: left;
+            text-decoration: line-through;
+            font-family: cursive;
+        }
+
+        #paragraph {
+            background: blue;
+            color: white;
+            text-align: right;
+            direction: rtl;
+            font-size: 100px;
+
+            /* For Lesson  13 z-index*/
+            z-index: 1;
+            position: relative;
+        }
+
+
+        /* Lesson 10 Table Properties */
+        table,
+        th,
+        td {
+            border: solid 3px black
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            height: 200%;
+            text-align: center;
+        }
+
+        td,
+        th {
+            vertical-align: top;
+        }
+
+
+        /* Lesson 11 Display Property  Look at Inspector*/
+        .illine {
+            display: inline;
+        }
+
+        /* When I Make Display None its Hidden H3  but Don't Save The Border 
+       inline its meen When I Color Background Its Make Under World Background Only*/
+        .visibl {
+            visibility: hidden;
+        }
+
+        /* When I Make Visibility Hidden Its Hidden Paragraph But Save The Border */
+
+
+
+        /* Lesson 12 Position Property (Static vs Absolute Vs Relative
+        Vs Fixed) */
+
+        #t-image {
+            width: 50%;
+            height: 50%;
+        }
+
+        #image-text {
+            background: black;
+            color: white;
+            position: relative;
+            bottom: 100px;
+            left: 100px;
+        }
+
+        #image-absolute {
+            background: black;
+            color: white;
+            position: absolute;
+            bottom: 0px;
+            right: 0;
+            margin: 0;
+
+        }
+
+        #tarmeez-fixed {
+            background: black;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        #margin {
+            background: green;
+            margin:10px auto ;
+            text-align: center;
+            height: 100px;
+            line-height: 4;
+        }
+        
+        #img {background: green;
+            width: 50%;
+            margin:10px auto ;
+            text-align: left;
+        }
+
+
+        /* # Lesson 15 FlexBox */
+        
+        h2 {background: orange;}
+
+        .container{ background-color: green;
+                    height: 300px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 50%;
+
+        }
+</style>
+</head>
+
+<body>
+    <!-- This is in line ellement -->
+    <h1 style="color:red;
+     background-color: black;">Hello World</h1>
+    <!-- This is not Inline Ellement but we can targets the ellement in head like h2  -->
+    <h1>Hi</h1>
+    <br><br><br>
+
+    <!-- Lesson 3 classes. and id# -->
+    <h2 class="orange">mohamed orange</h2>
+    <h2 class="orange">mohamed elm3lem class</h2>
+    <h2 class="red">mohamed red</h2>
+    <h2 class="red">mohamed radio class</h2>
+    <h2 id="blue">elaraby blue id</h2>
+    <br><br><br>
+
+    <!-- lesson 4 color property -->
+    <h2 id="color property1">color property 1</h2>
+    <h2 id="color property2">color property 2</h2>
+    <h2 id="color property3">color property 3</h2>
+    <h2 id="color property4">color property 4</h2>
+    <br><br><br>
+
+    <!--#5 border property 
+      I make it inside comment becouse i have h1 
+      
+      <h1>Hi</h1>
+      -->
+
+    <!-- Lesson 9 Text Property -->
+    <h3 id="tarmez">Tarmez Channel</h3>
+    <p id="paragraph">محمد
+        عربي
+        بيتعلم الcss
+    </p>
+
+    <!-- Lesson 10 Tabel Properties -->
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Tarmeez</td>
+            <td>1</td>
+        </tr>
+    </table>
+    <br><br><br>
+
+    <!-- Lesson 11 Display Properties -->
+
+    <h3 id="inline">Hello World </h3>
+    <p id="visibl">fadada <span>hi</span></p>
+
+
+    <!-- Lesson 12 Position Property (Static vs Absolute Vs Relative
+        Vs Fixed) -->
+
+    <h2 id="image-text">Tarmeez Channel</h2>
+    <!-- When I Make Div Absolute The Text Is Moving In Div But When I Make Div 
+     Static The Text It Move In Body -->
+    <!-- <div style="background: green; position: absolute; margin-top: 200px; width: 50%;">
+        <img id="t-image" src="../maxresdefault.jpg">
+        <h2 id="image-absolute">Tarmeez Absolute</h2> -->
+    </div>
+    <!-- When I Make It Fixed Thats Flow In Website -->
+    <h2 id="tarmeez-fixed">Tarmeez Fixed</h2>
+
+    <!-- Lesson 13--Index Property  Look At Line 96, 97, 168-->
+
+
+    <!-- Lesson 14 Margin Prop & Centering Element -->
+
+    <h2 id="margin">Margin Prop</h2>
+   <h2 id="img">
+    <img style="width: 100px; ;"
+     src="../1241e119-53bf-45e4-a041-96372d587325-1000x1000-59YORublL4eQyJbr6FqQwbQSR3RDoSKzL7qvRHuE.webp" alt="">
+   </h2>
+
+    </body>
+
+</html>

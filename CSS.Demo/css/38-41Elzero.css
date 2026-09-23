@@ -1,0 +1,94 @@
+h1 {
+  background-color: #dadada;
+  width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+/*------ Start Lesson-------
+    #38 - Vendors Prefixes
+    
+    -Chrome
+    -Safari
+    -Firefox
+    -IE, Edge
+    -Opera
+    
+    [1] New Css Feature Appeared
+    [2] Browsers Tests The Feature In Version x
+    [3] Browsers Add Prefix To Give Developers The Ability To Use It 
+    [4] The Feature Is Fully Supported In Y, No Need For Prefix
+
+    -webKit => Chrome, Safari, New Opera Version
+    -moz => Firefox
+    -ms => ie, Edge
+    o => Old Version Of Opera
+    */
+.l-38-1 {
+  width: 400px;
+  background-color: #eee;
+  margin: 20px auto;
+  padding: 20px;
+}
+.l-38 {
+  /* Before Add The Vendor Prefixes You Us Like This */
+  /*-webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -o-border-radius: 10px;
+        -ms-border-radius: 10px; */
+  /* After Add prefixes */
+  border-radius: 10px;
+  /* We Have Website To Chick The New Prefixe_Can I Use   */
+}
+/* 
+    [1] Most Of Users Is Using Moder Browsers 
+    [2] Vs Code Addon To Add The Prefix
+    [3] Task Runner
+    ------ End-Lesson-------
+    */
+/*   ------ Start Lesson #39
+Border-Radius------- */
+.l-39-1 {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  margin: 20px 20px;
+  border-radius: 6px; /* That Is Top Using In Button & Card View*/
+  /*border-radius: 50%*/ /* To Make It  Circle Make Height And width Same And Radius 50% */
+  outline: 2px solid red;
+  /* border-top-left-radius: 10px 10px;
+  border-bottom-left-radius: 10px;  */ /* We Can Use One Value Or To Value */
+}
+/*   ------ End Lesson #39------- */
+/*   ------ Start Lesson #40
+Shadow And Examples------- */
+/* -That Is Box Shadow Values-
+H-Shadow | V-Shadow | Blur | Spread | Color | Inset */
+.l-40-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #eee;
+  margin: 60px auto;
+  width: 300px;
+  box-shadow:
+    0 0 10px 0 #00000073 inset,
+    0 0 20px 0 #df313173;
+}
+/* Its To Make Any Disgin You Need It Like Monaliza  */
+/*   ------ End Lesson #40------- */
+.l-41-1 {
+  width: 600px;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ddd;
+}
+.one-41 {
+  box-sizing: border-box;
+  background-color: #eee;
+  width: 300px;
+  float: left;
+  padding: 10px; /* When I Add Padding 10px I Need To Make Parent 620px
+  In Width */
+}

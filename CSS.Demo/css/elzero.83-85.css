@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+h3 {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  margin: 10px 0;
+}
+/*Start - #83 - Media Queries And Responsive Designs Intro */
+.e-83 {
+  display: flex;
+  width: 1200px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px auto;
+}
+.e-83 > div {
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  gap: 10px;
+  width: 290px;
+}
+
+/* Its To Make min Width 1000 Max Width 1400 to parent Div  */
+@media (min-width: 1000px) and (max-width: 1400px) {
+  .e-83 > div {
+    background-color: blue;
+  }
+}
+/*End - #83 - Media Queries And Responsive Designs Intro */
+/* Start #84 - Media Queries And Responsive Designs 
+-------Media Queries 
+--Responsive Design
+--Concept Of Width
+-Mobile ---(Max-Width: 767px;)
+-Small Screens ---(min-Width: 768px;)
+-Medium Screens ---(min-Width: 992px;)
+-Large Screens ---(min-Width: 1200px;)
+-Furure Updates  Custom ---(Max-width: 1199px;)
+*/
+.e-84 {
+  display: flex;
+  width: 1200px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  gap: 10px;
+}
+.e-84 > div {
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  width: 290px;
+}
+/* Mobile */
+@media (max-width: 767px) {
+}
+/* Small Screens */
+@media (max-width: 768px) and (max-width: 991px) {
+  .e-85 div {
+    width: calc(50% - 5px);
+  }
+}
+/* Mediam Screen */
+@media (max-width: 992px) {
+}
+/* Large Screen */
+@media (max-width: 1200px) {
+}
+/* Custom */
+@media (max-width: 1199px) {
+}
+/* End #84 - Media Queries And Responsive Designs  */
+/* Start #85 - Media Queries And Responsive Designs Practice */
+.e-85 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.e-85 div {
+  padding: 20px;
+  background-color: red;
+  color: white;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  font-size: bold;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+/* Small Screens */
+@media (min-width: 768px) {
+  .e-85 div {
+    width: calc(50% - 5px);
+  }
+}
+/* Mediam Screen */
+@media (min-width: 992px) {
+  .e-85 div {
+    width: calc(25% - 5px);
+  }
+}
+/* End #85 - Media Queries And Responsive Designs Practice */
+/* Start #86 - Create Your Framework */
+.parent-86 {
+  position: relative;
+  background-color: #eee;
+  margin: 20px auto;
+  width: 1200px;
+  height: 200px;
+}
+.parent-86 div {
+  background-color: green;
+  color: white;
+}
+.product-86 {
+  background-color: red;
+  color: white;
+}
+.framwork {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.cricle {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+/* End #86 - Create Your Framework */
+
+/* Start #87 - Css Global Values 
+---inherit: Its Take A Father Value 
+---Initail: Its Take A Default Value 
+---Unset : If it has an inherited property from the parent, it takes it. 
+---Unset : If it doesn't have an inherited property from the parent, it takes it. 
+---revert:
+*/
+.child {
+  /* تجعل اللون أسود والمسافات صفر (تصفير صارم) */
+  color: initial;  /* black */
+  margin: initial; /* 0px */
+}
+
+.child {
+  /* تجعل اللون يأخذ من الأب والمسافات ترجع كما يراها المتصفح للفقرات */
+  color: revert;  /* green (موروث) */
+  margin: revert; /* 1em (افتراضي المتصفح) */
+}
+
+/* End #87 - Css Global Values */

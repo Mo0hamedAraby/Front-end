@@ -1,0 +1,547 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h3 {
+  background-color: black;
+  color: white;
+  margin: 10px auto;
+  text-align: center;
+  padding: 5px;
+}
+/* ----Start Lesson #68 - 2D Transform - Skew */
+h2 {
+  background-color: red;
+  color: white;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px;
+  transition: 0.5s ease-in-out;
+}
+h2:hover {
+  transform: skew(10deg) scale(1.1);
+  /* We Can Use skew Two Line X , Y  And Scale X ,Y */
+}
+/* ------End Lesson #68 - 2D Transform - Skew  */
+/*------ Start Lesson #69 - 2D Transform -
+--- Matrix :(scaleX, skewY, skewX, sacleY, translateX, translateY)
+--Its Same Line But We Use The Number Only or Function This Is Preparations
+--- Matrix :(translateX, translateY scaleX, skewY, skewX, sacleY, ) 
+--- This Is 6 Values To Matrix */
+.shape {
+  width: 230px;
+  height: 230px;
+  background-color: #eee; /* الخلفية الرمادية الفاتحة */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 30px auto;
+}
+
+/* المربع الداخلي الخاص بـ Transform */
+.transform-box {
+  width: 200px;
+  height: 200px;
+  background-color: #e58e8e; /* اللون الوردي */
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: matrix(0, 0, 0, 0, 0, 0);
+  /* This will Flip The Image */
+  transition: 1s ease-in-out;
+  /* Its Time To Make It Flip */
+}
+.shape:hover .transform-box {
+  transform: matrix(1, 0, 1, 2, 0, 1);
+}
+
+/* محور X (الأسفل) */
+.x-axis {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.x-axis::before,
+.x-axis::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  background-color: #333;
+  width: 30%;
+}
+
+.x-axis::before {
+  left: 0;
+}
+
+.x-axis::after {
+  right: 0;
+}
+
+/* محور Y (اليسار) */
+.y-axis {
+  position: absolute;
+  left: -35px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  writing-mode: vertical-lr;
+  font-weight: bold;
+  color: #333;
+}
+
+.y-axis::before,
+.y-axis::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  background-color: #333;
+  height: 30%;
+}
+
+.y-axis::before {
+  top: 0;
+}
+
+.y-axis::after {
+  bottom: 0;
+}
+/* -----End Lesson 69 - 2D Transform - Matrix */
+/* -----Start - #70 - Transform - Origin */
+/* Syntax
+Defult Values => 50% 50% 0 
+2D -Transform => Transform-Origin(X, Y)
+3D -Transform => Transform-Origin(X, Y, Z)
+X-Axis
+--CSS Unit [px, em ,rem]
+--%
+---Keyword
+---Left = 0% 
+---Center = 50%
+---right = 100%
+Y-Axis
+--CSS Unit [px, em ,rem]
+--%
+---Keyword
+---top = 0% 
+---Center = 50%
+---bottom = 100%
+--- */
+.shape-1 {
+  width: 230px;
+  height: 230px;
+  background-color: #eee; /* الخلفية الرمادية الفاتحة */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 100px auto;
+}
+
+/* المربع الداخلي الخاص بـ Transform */
+.transform-box-1 {
+  width: 200px;
+  height: 200px;
+  background-color: #e58e8e;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: left 50%;
+  transform: rotate(45deg);
+}
+/* محور X (الأسفل) */
+.x-axis-1 {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.x-axis-1::before,
+.x-axis-1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  background-color: #333;
+  width: 30%;
+}
+
+.x-axis-1::before {
+  left: 0;
+}
+
+.x-axis-1::after {
+  right: 0;
+}
+
+/* محور Y (اليسار) */
+.y-axis-1 {
+  position: absolute;
+  left: -35px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  writing-mode: vertical-lr;
+  font-weight: bold;
+  color: #333;
+}
+
+.y-axis-1::before,
+.y-axis-1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  background-color: #333;
+  height: 30%;
+}
+
+.y-axis-1::before {
+  top: 0;
+}
+
+.y-axis-1::after {
+  bottom: 0;
+}
+.shape-1 .origin {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50px;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  z-index: 10;
+}
+/* ----End - #70 - Transform - Origin */
+/* ----Start - #71 - Transform - Rotate */
+.shape-2 {
+  width: 230px;
+  height: 230px;
+  background-color: #eee; /* الخلفية الرمادية الفاتحة */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 60px auto;
+}
+
+/* المربع الداخلي الخاص بـ Transform */
+.transform-box-2 {
+  width: 200px;
+  height: 200px;
+  background-color: #e58e8e;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center center;
+  transform: rotate3d(0, 0, 1, 62deg);
+}
+/* محور X (الأسفل) */
+.x-axis-2 {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.x-axis-2::before,
+.x-axis-2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  background-color: #333;
+  width: 30%;
+}
+
+.x-axis-2::before {
+  left: 0;
+}
+
+.x-axis-2::after {
+  right: 0;
+}
+
+/* محور Y (اليسار) */
+.y-axis-2 {
+  position: absolute;
+  left: -35px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  writing-mode: vertical-lr;
+  font-weight: bold;
+  color: #333;
+}
+
+.y-axis-2::before,
+.y-axis-2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  background-color: #333;
+  height: 30%;
+}
+
+.y-axis-2::before {
+  top: 0;
+}
+
+.y-axis-2::after {
+  bottom: 0;
+}
+.shape-2 .origin {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50px;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  z-index: 10;
+}
+.z-axis-2 {
+  position: absolute;
+  left: -35px;
+  bottom: -35px;
+  height: 120%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  writing-mode: vertical-lr;
+  font-weight: bold;
+  color: #333;
+  transform-origin: left bottom;
+  transform: rotate(233deg);
+}
+
+.z-axis-2::before,
+.z-axis-2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  background-color: #333;
+  height: 30%;
+}
+
+.z-axis-2::before {
+  top: 0;
+}
+
+.z-axis-::after {
+  bottom: 0;
+}
+/* ----End - #71 - Transform - Rotate */
+/* ---- Start -  #72 - 3D Transform - Translate, Perspective, Perspective Origin */
+.shape-3 {
+  width: 230px;
+  height: 230px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 60px auto;
+  perspective: 300px;
+  perspective-origin: center;
+}
+
+/* المربع الداخلي الخاص بـ Transform */
+.transform-box-3 {
+  width: 200px;
+  height: 200px;
+  background-color: #e58e8e;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate3d(0, 0, 123px);
+}
+/* محور X (الأسفل) */
+.x-axis-3 {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.x-axis-3::before,
+.x-axis-3::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  background-color: #333;
+  width: 30%;
+}
+
+.x-axis-3::before {
+  left: 0;
+}
+
+.x-axis-3::after {
+  right: 0;
+}
+
+/* محور Y (اليسار) */
+.y-axis-3 {
+  position: absolute;
+  left: -35px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  writing-mode: vertical-lr;
+  font-weight: bold;
+  color: #333;
+}
+
+.y-axis-3::before,
+.y-axis-3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  background-color: #333;
+  height: 30%;
+}
+
+.y-axis-3::before {
+  top: 0;
+}
+
+.y-axis-3::after {
+  bottom: 0;
+}
+.shape-3 .origin {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50px;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  z-index: 10;
+}
+.z-axis-3 {
+  position: absolute;
+  left: -35px;
+  bottom: -35px;
+  height: 120%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  writing-mode: vertical-lr;
+  font-weight: bold;
+  color: #333;
+  transform-origin: left bottom;
+  transform: rotate(233deg);
+}
+
+.z-axis-3::before,
+.z-axis-3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  background-color: #333;
+  height: 30%;
+}
+
+.z-axis-3::before {
+  top: 0;
+}
+
+.z-axis-3::after {
+  bottom: 0;
+}
+/* ---- End -  #72 - 3D Transform - Translate, Perspective, Perspective Origin */
+/* Start - #73 - 3D Transform - Backface Visibility And Flip Product */
+.container {
+  margin: 40px auto;
+  width: 200px;
+}
+.box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.box:hover {
+  transform: rotatey(-180deg);
+}
+.box .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
+.box .front {
+  background-color: red;
+}
+.box .back {
+  background-color: green;
+  transform: rotatey(180deg);
+}
+/* End - #73 - 3D Transform - Backface Visibility And Flip Product */

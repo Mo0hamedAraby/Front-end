@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exam.42-45</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .father-e1 {
+      position: relative;
+      padding: 20px;
+      background-color: #eee;
+      width: 600px;
+      height: 200px;
+      margin: 50px auto;
+      text-align: center;
+      transition: margin-top 0.5s ease-in-out;
+    }
+
+    .father-e1:hover {
+      margin-top: 80px;
+    }
+
+    .father-e1:hover .second {
+      margin-top: 40px;
+    }
+
+    .second {
+      position: absolute;
+      width: 80%;
+      padding: 10px;
+      margin: 20px;
+      left: calc(10% - 20px);
+      text-align: center;
+      background-color: #ddd;
+      transition: margin-top 0.5s 0.5s ease-in-out;
+    }
+
+    /* Exam_2 */
+    .e-2 {
+      background-color: transparent !important;
+      padding: 0 !important;
+      border: 0 !important;
+      font-size: 0 !important;
+      height: 100px;
+    }
+
+    .e-2::before {
+      background-color: #eee !important;
+      position: absolute;
+      text-align: center;
+      content: "Elzero";
+      width: 400px !important;
+      font-size: 20px !important;
+      color: black !important;
+      padding: 10px !important;
+      margin-top: 20px !important;
+      left: 50%;
+      margin-left: -200px !important;
+    }
+
+    /* Exam_3 */
+
+
+    .e-3 div {
+      margin: 10px;
+      padding: var(--mainPadding, 10px);
+      color: var(--mainColor, red);
+      border: 2px solid var(--mainColor, black);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="father-e1">
+    Will Go On Hover In Half Second
+    <div class="second">Will Go Down Half Scond</div>
+  </div>
+  <hr />
+  <div class="e-2" style="
+        background-color: red;
+        color: white;
+        padding: 20px;
+        border: 1px solid blue;
+        font-size: 20px;
+      ">
+  </div>
+  <hr />
+  <div class="e-3">
+    <div>Element</div>
+    <div>Element</div>
+    <div>Element</div>
+  </div>
+</body>
+
+</html>

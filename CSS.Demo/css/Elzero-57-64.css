@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h3 {
+  display: flex;
+  color: white;
+  background-color: black;
+  justify-content: center;
+  font-size: x-large;
+  padding: 5px;
+  margin: 10px;
+}
+/* Start-Lesson-57-Grid-Parent-Template Columns
+   --display:grid | Inline-Grid 
+   --Grid-template-columns =>[Numbers Of Columns In] => [px, %, Auto, Repeat(),fraction, mix]
+   --Auto => shy  
+   --fraction => Greedy    */
+
+.l-57 {
+  margin: 20px auto;
+  width: 800px;
+  height: 500px;
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: 10% repeat(2, 100px) auto 1fr 2fr; /* This Is Mix */
+  gap: 10px 10px; /* I Make It Her Because To Now The Diffrrence */
+}
+.l-57 div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+/* End-Lesson-57-Grid-Parent-Template Columns */
+/* Start-Lesson-58-Grid-Template-Rows And Gap 
+   --display:grid | Inline-Grid 
+   --grid-template-columns & Rows =>[Numbers Of Columns] =>
+      [px, %, Auto, Repeat(),fraction, mix] => Its To Width
+   --Auto => shy  
+   --fraction => Greedy
+   -- Column-Gap => Like Margen Between Divs
+   -- Rows-Gap => Like Margin Top And Bottom Divs
+   -- Gap => Its A Shorthand To Columns & Rows
+   */
+.l-58 {
+  margin: 20px auto;
+  width: 800px;
+  height: 500px;
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: 10% repeat(2, 100px) auto 1fr 2fr; /* This Is Mix */
+  grid-template-rows: 10% repeat(2, 100px) auto 1fr 2fr; /* This Is Mix */
+  column-gap: 10px; /* Its Like Margin Between Divs With Width */
+  row-gap: 10px; /* Its Like Margin Between Divs With Height*/
+  gap: 10px 10px; /* This Is Shorthand Row-column Gaps */
+}
+.l-58 div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+/* End-Lesson-Grid-Template-Rows And Gap */
+/* Start-Lesson-59-Grid-Parent-Justify Content & Align Content */
+.l-59 {
+  margin: 20px auto;
+  width: 800px;
+  height: 500px;
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: repeat(4, auto); /* This Is Mix */
+  grid-template-rows: repeat(3, auto); /* This Is Mix */
+  gap: 10px 10px;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.l-59 div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+*/
+/* End-Lesson-59-Grid-Parent-Justify Content & Align Content */
+/* Start-Lesson-60-Grid-Parent-Complete Laypout With Template Areas */
+.lesson-60 {
+  height: 100vh;
+  background-color: #eee;
+}
+/* End-Lesson-60-Grid-Parent-Complete Laypout With Template Areas */

@@ -1,0 +1,292 @@
+h1 {
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 3px;
+  margin: 10px 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* ____Lesson 46 Flex Box Parent _Direction, Wrap, Flow */
+
+/* Flexible - Box 
+------For Parent----- 
+- display: flex => To Start Flexible box
+- flex-direction : Row => Defualt Value 
+- flex-Wrap: To Make It Wrap & We Have Wrap Reverse
+- Flex-flow [Flex Diection] + [flex Wrap]
+-*/
+.flex {
+  display: flex;
+  overflow: hidden;
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+  flex-flow: row-reverse nowrap; /*Its To Make Two Function 
+  And We Can Make Direction _ Column or Column Reverse
+  And Wrap We Can Make It Wrap-Reverse or Wrap */
+}
+.flex div {
+  background-color: #f00;
+  color: white;
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 20px;
+}
+.float {
+  overflow: hidden;
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+}
+.float div {
+  background-color: #f00;
+  color: white;
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ____ End Lesson 46 Flex Box Parent _Direction, Wrap, Flow */
+/* ____ Start Lesson 47 Flex Box Parent _ Justify Content */
+/* -justify-content: 
+--Flex-start => Default Value
+--Flex-end => Its To Make Last Box In End Look At Book 
+--Center => Its To make Last Div Center 
+*/
+.flex-47 {
+  display: flex; /* We Have Another value For This Content 
+  /* overflow: hidden; */
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+  justify-content: space-between;
+}
+.flex-47 div {
+  background-color: #f00;
+  color: white;
+  /* float: left; */
+  width: calc(90% / 3);
+  /*Its same With margin-right,margin lift */
+  text-align: center;
+  padding: 20px;
+}
+.float-47 {
+  overflow: hidden;
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+}
+.float-47 div {
+  background-color: #f00;
+  color: white;
+  float: right; /* Its Make All Div Right */
+  /*  width: calc(98% / 3);    ---Its Refrenence _1--- */
+  width: calc(90% / 3);
+  /* We Can't Make It Flaot Right Because
+  all Div Its Start Right And 
+  --When I Make Any Thing its Make Width and Padge Size Not Same 
+  Beause It We Useing Display:flex */
+  text-align: center;
+  padding: 20px;
+}
+.two-47 {
+  /* margin-left: 1%; 
+  margin-right: 1%;
+  ---Its Refrenence_1---
+  */
+  margin-right: 5%;
+  margin-left: 5%;
+}
+/* Its Not Cool When Change The Value In Width*/
+/* ____End Lesson 47 Flex Box Parent _ Justify Content */
+/* ____Start Lesson 48 Flex Box Parent _ Align Items */
+.flex-48 {
+  display: flex;
+  overflow: hidden;
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+  justify-content: center;
+  align-items: center;
+}
+.flex-48 div {
+  background-color: #f00;
+  color: white;
+  float: left;
+  width: calc(100% / 3);
+  text-align: center;
+  padding: 20px;
+}
+.float-48 {
+  overflow: hidden;
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+}
+.float-48 div {
+  float: left;
+  background-color: #f00;
+  color: white;
+  width: calc(100% / 3);
+  text-align: center;
+  padding: 20px;
+}
+.ex-1,
+.at-1 {
+  height: 80px;
+}
+.ex-2,
+.at-2 {
+  height: 120px;
+}
+/* ____End Lesson 48 Flex Box Parent _ Align Items */
+/* ____Start Lesson 49 Flex Box Parent _ Align Content 
+We Have Some Value 
+Flex Start 
+Flex End 
+Space around
+Space Between 
+Space evenly */
+.flex-49 {
+  display: flex;
+  overflow: hidden;
+  background-color: #eee;
+  width: 600px;
+  height: 400px;
+  padding: 20px;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-evenly;
+}
+.flex-49 div {
+  background-color: #f00;
+  color: white;
+  width: calc(100% / 3);
+  text-align: center;
+  padding: 20px;
+}
+/* ____End Lesson 49 Flex Box Parent _ Align Content */
+/* ____Start Lesson 50 Flex Box child -Grow, Shrink,Order
+--- 0 => Default Value In Grow When Parent are lager than Child Its Work   
+--- 0 => Default Value In Shrink When Parent are smaller than Child Its Work   
+--- auto => Default Value The Order Its To Make Referens For Game Or Change Change Logo  */
+.flex-50 {
+  background-color: #eee;
+  width: 800px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+.flex-50 div {
+  background-color: #f00;
+  color: white;
+  width: 80px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 5px;
+}
+.flex-50-2 {
+  background-color: #eee;
+  width: 500px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+}
+.flex-50-2 div {
+  background-color: #f00;
+  color: white;
+  width: 80px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 5px;
+}
+.flex-50-3 {
+  background-color: #eee;
+  width: 800px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+}
+.flex-50-3 div {
+  background-color: #f00;
+  color: white;
+  width: calc(100% / 6);
+  text-align: center;
+  padding: 20px;
+  margin-right: 5px;
+}
+/* ____End Lesson 50 Flex Box Child _ Grow, Shrink, Order */
+/* ____Start Lesson 51 Flex Box child -Flex Basis, Flex Shorthand
+--Auto Its Default Value Flex Basis 
+-- Flex Shorthand Grow[0]Shrink[0]Basis[px,%] */
+.flex-51 {
+  background-color: #eee;
+  width: 800px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+.flex-51 div {
+  background-color: #f00;
+  color: white;
+  width: 80px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 5px;
+}
+.flex-51-2 {
+  background-color: #eee;
+  width: 800px;
+  padding: 20px;
+  margin: 20px auto;
+  display: inline-flex;
+  justify-content: center;
+}
+.flex-51-2 div {
+  background-color: #f00;
+  color: white;
+  width: 80px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 5px;
+  flex: 1 1 200px; /* Its Shorthand And Default Value x*/
+}
+.in-blo {
+  display: inline-block;
+  color: #f00;
+  margin: 10px;
+}
+/* ____End Lesson 51 Flex Box child -Flex Basis, Flex Shorthand */
+/* ____Start Lesson 52 Flex Box child - Align Self, Games, Task */
+/* -Align-Self: Default Value => Auto  */
+.flex-52 {
+  background-color: #eee;
+  width: 800px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+.flex-52 div {
+  background-color: #f00;
+  color: white;
+  width: 80px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 5px;
+}
+/* ____End Lesson 52 Flex Box child - Align Self, Games, Task */
