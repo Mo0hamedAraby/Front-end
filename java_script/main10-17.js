@@ -27,7 +27,7 @@ Variabled Intro
 - Why We Use Variables ?
 - Declare A Variable And Use
 - Syntax (Keyword | Variable Name | Assigment Operatot | Variable Value )
-- Variable With Out Var
+- Variable With Out Var2
 - Multiple Variables In The Same Line 
 - Id And Global Variable
 - Loosely Typed Vs Strongly Typed 
@@ -41,7 +41,57 @@ console.log(user);
 console.log(user);
 console.log(age);
 console.log(hello);
+
+hello.innerHTML = "Option";
 /* Its Not Work New 
 hello.innerHTML = "option"; 
 console.log("hello");
 */
+
+/* ----------- 013 - var, let, Const Compare -----------
+Var
+- Redclare(yes)
+- Access Before Declare(undefined)
+- Variable Scope Drama [Added To Window] (yes)
+- Block Or Function Scope ()
+
+Let
+- Redclare(no) Its Make Error
+- Access Before Declare(Error)
+- Variable Scope Drama [Added To Window] (no)
+- Block Or Function Scope ()
+
+Const
+- Redclare(no) Its Make Error
+- Access Before Declare(Error)
+- Variable Scope Drama [Added To Window] (no)
+- Block Or Function Scope ()
+
+*/
+/*var a = 1;
+var a = 2;
+console.log(a);
+let a = 1;
+let a = 2;
+console.log(a);
+const a = 1;
+const a = 2;
+console.log(a);*/
+
+/*----------- 014 - String Syntax And Character Escape Sequences-----------
+String Syntax + Character Escape  Sequences 
+Escape + Line continue 
+\ = Its name Scape Oprator
+*/
+console.log("Elzero Web 'School'");
+console.log('Elzero Web "School"');
+console.log('Elzero Web "School"');
+console.log("Elzero Web 'School'");
+console.log("Elzero \\ Web 'School'");
+console.log(
+  "Elzero \
+  Web \
+  School",
+); /* Its Like One Line Because \ This BackSlash*/
+/* We Have Anthor One its \n  To Make New Line In One Line JavaScript*/
+console.log("ELzero\nWeb\nSchool");
