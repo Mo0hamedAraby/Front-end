@@ -18,6 +18,7 @@
         console.log(--c + +b + --a * +b++ - +b * a + --a - +true);
 
         /*
+        // ------Chalelenge 1
         [++a] [+]
         -----line One 
         [++a]
@@ -53,7 +54,7 @@
         Values IS    a = 14    b = 21   c = 82
         ----line Three
         [--c]
-        - Value: 82
+        - Value: 81
         - Explain: pre increment
         [+b]
         - Value: 21
@@ -62,7 +63,7 @@
         - Value: 13
         - Explain: pre decrement
         [b++]
-        - Value: 22
+        - Value: 21
         - Explain: post increment
         [+b]
         - Value: 22
@@ -77,9 +78,68 @@
         [+true] 
         - Value: 1
         - Explain: Explain To Number
-        - 82 + 21 + 13 * 21 - 22 * 13 + 12 -1 = 100 
+        - 81 + 21 + 13 * 21 - 22 * 13 + 12 -1 = 100 
         - Explain:
+        // ------ Chalelenge 2 -------
         */
+        let d = "-100";
+        let e = "20";
+        let f = 30;
+        let g = true;
+        console.log(-d * +e) // 2000
+        console.log(-d + ++e * ++g + ++f) //173
+
+        /* -------Exam 1-----
+        
+        */
+        // Replace ? With Arithmetic Operators
+        console.log(10 * 20 + 15 % 3 + 190 + 10 - 400); // 0
+
+        let num = 3;
+        // Exam 2
+        // Solution One
+        console.log(num + num); // 6
+
+        // Solution Two
+        console.log(num * (true + true)); // 6
+
+        // Soultion Three
+        console.log(num * true + num * true); // 6
+
+        // Soultion Four
+        console.log(num * num - num); // 6
+
+        // Solution Five
+        console.log((num * num) - (true + true + true)); // 6
+
+        // Solution Six
+        console.log((num + num) - (true - true)); // 6
+
+        // Exam 3 
+        let num1 = "10";
+
+        // Solution One
+        console.log(num1 * (true + true)); // 20
+
+        // Solution Two
+        console.log(+num1 + +num1); // 20
+
+        // Solution Three
+        console.log(Number(num1) + Number(num1)); // 20
+
+        // Solution Four
+        console.log(num1 * 2); // 20
+
+        let points = 10;
+
+        // Write Your Code Here
+
+        console.log(points + (true + true + true)); // 13
+
+        // Write Your Code Here
+
+        console.log(points - (true + true)); // 8;
+
     </script>
 </body>
 
